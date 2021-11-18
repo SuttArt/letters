@@ -34,6 +34,7 @@ int getch(void);
 void show(Punkt p, char symbol);
 void hide(Punkt p);
 void manageThreads(char x);
+PCB* InitThread (char e);
 
 //global Variables
 PCB* gFirstItem; // der 1. Knoten in der Liste
