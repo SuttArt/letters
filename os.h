@@ -16,6 +16,15 @@ typedef struct PunktSTRU
 }
 Punkt;
 
+typedef struct PCB//Process Control Block
+{
+	pthread_t tID;
+	char Face;
+	char Prog; //H,V,R = ProgH, ProgV, ProgR
+	struct PCB* next;
+}
+PCB;
+
 //Protorypen
 void gotoXY (int x, int y);
 void Cursor (int x);
