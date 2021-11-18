@@ -2,6 +2,9 @@
 
 void init(void)
 {
+	gFirstItem = NULL;
+	gLastItem = NULL;
+	gPCBsize = sizeof(PCB);
 	Cursor(0); //Cursor OFF
 };
 

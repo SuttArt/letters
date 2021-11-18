@@ -34,3 +34,8 @@ int getch(void);
 void show(Punkt p, char symbol);
 void hide(Punkt p);
 void manageThreads(char x);
+
+//global Variables
+PCB* gFirstItem; // der 1. Knoten in der Liste
+PCB* gLastItem;	 // der letzte Knoten in der Liste
+int gPCBsize; 	 //Größe von PCB
