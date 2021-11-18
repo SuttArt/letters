@@ -1,4 +1,4 @@
-/*#include "os.h"
+#include "os.h"
 
 void gotoXY (int x, int y)
 {
@@ -20,7 +20,7 @@ void Cursor(int x)  //  cursor 1/0 = ON/OFF
     }
 }
 
-
+/*
 char inkey (void)
 {
     char x = '\0';
@@ -29,3 +29,14 @@ char inkey (void)
 }
 
 */
+
+void show(Punkt p, char symbol)
+{
+	gotoXY(p.X, p.Y);
+	putchar(symbol);
+};
+
+void hide(Punkt p)
+{
+	show(p,' ');
+};
