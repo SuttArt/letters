@@ -9,19 +9,19 @@ int main(void)
 	
 	init();
 	
-	printf("\nEin Symbol eintippen: \n");
-	x = getch();
-	printf("\nIhr Symbol %c ist drin ", x);
-	
-	p.X = 11;
-	p.Y = 11;
-	show(p,x);
-	sleep(3);
-	hide(p);
-	
-	p.X = 5;
-	p.Y = 5;
-	show(p,x);
+	gotoXY(0,22);
+	printf("Type: ESC to exit");
+	gotoXY(0,23);
+	printf("Message");
+	do
+	{
+		x = getch();
+		if('a' <= x && x <= 'z')
+		{
+			manageThreads(x);
+		}
+	}
+	while(x != K_ESC);
 
 	/*
 	gotoXY(11,11);

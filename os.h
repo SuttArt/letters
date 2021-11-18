@@ -5,6 +5,9 @@
 #include <unistd.h>
 //#include <times.h>
 
+//Precompiler-Variablen
+#define K_ESC 27
+
 //Datatypes
 typedef struct PunktSTRU
 {
@@ -21,3 +24,4 @@ void finish(void);
 int getch(void);
 void show(Punkt p, char symbol);
 void hide(Punkt p);
+void manageThreads(char x);
