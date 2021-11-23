@@ -24,8 +24,11 @@ int main(void)
         IN(inpt);
         if WEITER //(inpt > 0) //generate the list
         {
+            //TODO: make (init) for 28-35
             current = (Node*) malloc(NodeSize);//Speicher rezervierung
             //current - eine adresse, deswegen:
+            //(*current).Z = inpt;
+            //oder:
             current -> Z = inpt;
             //währe current - eine Structur, dann:
             //current.Z = inpt;
@@ -39,7 +42,7 @@ int main(void)
         }
     }
     while WEITER; //(inpt > 0 ); //list is ready
-
+    //TODO: Hausaufgabe - eine Funktion daraus machen.
     //show the list, walking through the List
     current = first;
     while (current != NULL)
