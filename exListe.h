@@ -8,3 +8,6 @@ typedef struct Node
 }
 Node; //this is ONE node in the List
 
+#define WEITER (inpt > 0 )
+#define IN(x) scanf("%d", &x)
+

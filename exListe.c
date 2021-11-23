@@ -20,8 +20,9 @@ int main(void)
     do
     {
         printf("\nPositive Zahl eingeben --> ");
-        scanf("%d",&inpt);
-        if (inpt > 0) //generate the list
+        //scanf("%d",&inpt);
+        IN(inpt);
+        if WEITER //(inpt > 0) //generate the list
         {
             current = (Node*) malloc(NodeSize);//Speicher rezervierung
             //current - eine adresse, deswegen:
@@ -37,7 +38,7 @@ int main(void)
 
         }
     }
-    while(inpt > 0 ); //list is ready
+    while WEITER; //(inpt > 0 ); //list is ready
 
     //show the list, walking through the List
     current = first;
