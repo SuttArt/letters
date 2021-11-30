@@ -1,6 +1,6 @@
 #include "exListe.h"
 
-int main(void)
+int main1(void)
 {
     int inpt = 0;
     Node* first = NULL; //first Node of the List
