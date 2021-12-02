@@ -32,8 +32,10 @@ char inkey (void)
 
 void show(Punkt p, char symbol)
 {
+    pthread_mutex_lock(&gScreen);//Nicht in PA verwenden! Selber suchen! Oder doch nicht...
 	gotoXY(p.X, p.Y);
 	putchar(symbol);
+    pthread_mutex_unlock(&gScreen);
 };
 
 void hide(Punkt p)

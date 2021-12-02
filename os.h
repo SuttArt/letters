@@ -3,10 +3,14 @@
 #include <windows.h>
 #include <pthread.h>
 #include <unistd.h>
-//#include <times.h>
+#include <time.h>
 
 //Precompiler-Variablen
 #define K_ESC 27
+#define K_SPACE 32
+#define K_ENTER 13
+#define X_LENGTH 60
+#define Y_LENGTH 18
 
 //Datatypes
 typedef struct PunktSTRU
@@ -39,8 +43,12 @@ void manageThreads(char x);
 PCB* InitThread (char e);
 void RunThread(PCB* p);
 void* ProgH(void* arg);
+void* ProgV(void* arg);
+void* ProgR(void* arg);
+void TaskMan(void);
 
 //global Variables
-PCB* gFirstItem; // der 1. Knoten in der Liste
-PCB* gLastItem;	 // der letzte Knoten in der Liste
+PCB* gFirstItem; // Adresse des 1. Knoten in der Liste
+PCB* gLastItem;	 // Adresse des letzte Knoten in der Liste
 int gPCBsize; 	 //Größe von PCB
+pthread_mutex_t gScreen;

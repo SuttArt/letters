@@ -8,11 +8,16 @@ int main(void)
 	Punkt p;
 	
 	init();
-	
-	gotoXY(0,22);
+
+    pthread_mutex_lock(&gScreen);
+
+    gotoXY(0,22);
 	printf("Type: ESC to exit");
 	gotoXY(0,23);
-	printf("Message");
+
+    pthread_mutex_unlock(&gScreen);
+
+    printf("Message");
 	do
 	{
 		x = getch();
@@ -20,6 +25,10 @@ int main(void)
 		{
 			manageThreads(x);
 		}
+        if(x == K_SPACE || x == K_ENTER)
+        {
+            TaskMan();
+        }
 	}
 	while(x != K_ESC);
 
